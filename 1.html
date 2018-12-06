@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<HEAD>
+</HEAD>
+<body>
+<input type="number" id="var1" onchange="cal()">
+<input type="number" id="var2" onchange="cal()">
+<p>
+<b>addition:</b><b id="add"></b><br>
+<b>subtraction:</b><b id="sub"></b><br>
+<b>mul:</b><b id="mul"></b><br>
+<b>div:</b><b id="div"></b><br>
+</p>
+<script>
+function cal(){
+var x=document.getElementById('var1').value;
+var y=document.getElementById('var2').value;
+document.getElementById('add').innerHTML=(x-1)+2+(y-1);
+document.getElementById('sub').innerHTML=x-y;
+document.getElementById('mul').innerHTML=x*y;
+document.getElementById('div').innerHTML=x/y;
+}
+</script>
+</body>
+</html>
+
+
+<!--
+in add (x-1)+2+(y-1), here x-1, y-1 is convert them to number so in addition of x and y they will get add not concatenate  and 2 is used to recover the
+sutraction of 1 in x and y 
+
+
+you can also use 
+
+document.getElementById('add').innerHTML=parseInt(x,10)+parse(y,10);
+parseInt take 2 value ,first string and second is base value
+
+-->

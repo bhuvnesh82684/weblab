@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+Enter your data:<input type="text" id="val" onchange="revF()">
+<script>
+function revF(){
+var x=document.getElementById('val').value;
+	if(!(isNaN(x)))
+	{
+		x = x + "";
+		document.getElementById('result').innerHTML= 'Reverse value is:'+ x.split("").reverse().join("");
+	}
+	else
+	{	
+		X=x.toLowerCase();
+		var p=['a','e','i','o','u'];
+		var i=X.length+1;
+		for(var j=0;j<5;j++)
+		{		
+			var q=X.indexOf(p[j]);
+			if(q>=0&&i>q)
+				i=q;
+		}
+		if(i!=(X.length+1))
+			document.getElementById('result').innerHTML= 'the right most vowel position is:'+(i+1);
+		else
+			document.getElementById('result').innerHTML= 'No vowel';
+	}
+}
+</script>
+<p id="result"></p>
+</body>
+</html>
