@@ -2,6 +2,11 @@
 <html>
 <head>
 <meta http-equiv="refresh" content="1"/>
+<style>
+body{
+	font-size:100px;
+}
+</style>
 </head>
 <body>
 <?php
