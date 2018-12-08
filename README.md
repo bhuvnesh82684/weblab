@@ -1,4 +1,4 @@
 # weblab
 web lab program
-7 is using session 
-7 a is using file
+6 is using session 
+6a is using file
