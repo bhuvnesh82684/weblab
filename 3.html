@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+</head>
+<body>
+<p id="d"></p>
+<script>
+var idp=document.getElementById('d');
+var fs=5;
+var v1=setInterval(f1,1000);
+function f1()
+{
+idp.innerHTML="TEXT GROWING";
+fs+=5;
+idp.setAttribute('style',"font-size:"+ fs +"px;  color:red;");
+if (fs>=50)
+{
+	clearInterval(v1);
+	var v2=setInterval(f2,1000);
+}
+}
+function f2()
+{
+idp.innerHTML="TEXT Shrinking";
+idp.setAttribute('style','font-size:'+ fs+ 'px;color:blue;');
+fs=fs-5;
+if (fs===5)
+{
+	clearInterval(v2);
+	
+}
+} 
+</script>
+</body>
+</HTML>
